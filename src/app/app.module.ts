@@ -11,8 +11,11 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LocationsPage } from '../pages/locations/locations';
 
 import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +23,13 @@ import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/nativ
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LocationsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,7 +37,8 @@ import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/nativ
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LocationsPage
   ],
   providers: [
     StatusBar,
